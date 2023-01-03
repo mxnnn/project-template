@@ -1,0 +1,5 @@
+.swc/
+.next/
+node_modules/
+
+.eslintrc.js

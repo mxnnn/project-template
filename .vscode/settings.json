@@ -1,3 +1,7 @@
 {
-  "eslint.packageManager": "pnpm"
+  "editor.formatOnSave": true,
+  "eslint.packageManager": "pnpm",
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.importModuleSpecifier": "shortest",
+  "typescript.preferences.quoteStyle": "single"
 }
