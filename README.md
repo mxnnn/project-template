@@ -51,6 +51,16 @@ pnpm run dev
 ℹ️ To debug with VS Code, open the command palette (`Ctrl + Cmd + P` or `Cmd + Shift + P`) and run
 `Debug: Attach to Node Process`. Select the corresponding process (should be named `mina-governance`).
 
+# Directory layout
+
+    .
+    ├── apps                     # NextJS applications (Web & Docs)
+    ├── server                   # Rust API/Backend
+    ├── packages                 # Shared packages
+    ├── scripts                  # Scripts
+    ├── LICENSE
+    └── README.md
+
 ## Environment configuration
 
 The application is configured via [`dotenv`](https://github.com/motdotla/dotenv).
