@@ -6,7 +6,7 @@ export default {
     options: {},
   },
   docs: {
-    autodocs: true,
+    autodocs: false,
   },
   features: {
     babelModeV7: true,
