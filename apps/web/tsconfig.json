@@ -1,24 +1,13 @@
 {
   "extends": "tsconfig/nextjs.json",
   "compilerOptions": {
-    "types": [
-      "node",
-      "jest",
-      "@testing-library/jest-dom"
-    ],
+    "types": ["node", "jest", "@testing-library/jest-dom"],
     "plugins": [
       {
         "name": "next"
       }
     ]
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".storybook/**/*.ts"],
+  "exclude": ["node_modules"]
 }

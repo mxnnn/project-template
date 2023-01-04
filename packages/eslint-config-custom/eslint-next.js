@@ -14,7 +14,13 @@ module.exports = {
     jest: true,
   },
   plugins: ['@typescript-eslint', '@next/eslint-plugin-next', 'simple-import-sort', 'unused-imports'],
-  extends: ['next', 'eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
+  extends: [
+    'next',
+    'prettier',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:storybook/recommended',
+  ],
   rules: {
     '@typescript-eslint/no-unused-vars': 'off',
     'unused-imports/no-unused-imports': 'error',

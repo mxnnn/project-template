@@ -8,14 +8,19 @@
   ],
   "scripts": {
     "build": "turbo run build && pnpm cargo:make",
-    "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "build:web": "turbo run build --filter=mina-governance-web",
+    "build:docs": "turbo run build --filter=mina-governance-docs",
     "clean": "pnpx rimraf ./**/node_modules ./pnpm-lock.yaml ./**/.next ./**/.turbo",
     "cargo:make": "cd server && cargo make v1",
-    "cargo:run": "cd server && cargo run"
+    "cargo:run": "cd server && cargo run",
+    "dev": "turbo run dev --parallel",
+    "dev:web": "turbo run dev --filter=mina-governance-web",
+    "dev:docs": "turbo run dev --filter=mina-governance-docs",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "dotenv-cli": "^6.0.0",
     "eslint-config-custom": "workspace:*",
     "next": "13.1.1",
     "prettier": "latest",
@@ -26,6 +31,5 @@
   "engines": {
     "node": ">=14.0.0"
   },
-  "dependencies": {},
   "packageManager": "pnpm@7.18.2"
 }
