@@ -1,8 +1,8 @@
 <h1 align="center">Mina Governance</h1>
 
-## About
-
-Mina Governance provides users a web outlet to govern the Mina Blockchain.
+<p align="center">
+  <b>Mina Governance provides users a web outlet to govern the Mina Blockchain.</b>
+</p>
 
 ## Getting started
 
@@ -61,4 +61,5 @@ See [`.env.example`](./.env.example) for all possible configuration values.
 - [Next.js Documentation](https://nextjs.org/docs/getting-started)
 - [Rust Programming Language](https://doc.rust-lang.org/book/)
 - [Typescript](https://www.typescriptlang.org/docs/)
+- [Mina Protocol](https://docs.minaprotocol.com/)
 - [Turborepo](https://turbo.build/)
