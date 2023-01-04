@@ -40,8 +40,6 @@
 
   ⚠️ Make sure the settings in `.env` are correct for your local environment.
 
-### Running in the console
-
 Run the app in development mode:
 
 ```sh
@@ -51,7 +49,7 @@ pnpm run dev
 ℹ️ To debug with VS Code, open the command palette (`Ctrl + Cmd + P` or `Cmd + Shift + P`) and run
 `Debug: Attach to Node Process`. Select the corresponding process (should be named `mina-governance`).
 
-# Directory layout
+## Directory layout
 
     .
     ├── apps                     # NextJS applications (Web & Docs)
