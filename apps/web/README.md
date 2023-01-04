@@ -1,4 +1,4 @@
-## Getting Started
+## Mina Governance Web
 
 First, run the development server:
 

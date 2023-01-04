@@ -1,3 +1,7 @@
+import { withMockdate } from '@shared/storybook';
+
+export const decorators = [withMockdate];
+
 export default {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
