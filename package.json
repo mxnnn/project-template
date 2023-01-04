@@ -1,5 +1,5 @@
 {
-  "name": "m-gov",
+  "name": "mina-governance",
   "version": "0.0.0",
   "private": true,
   "workspaces": [
@@ -7,11 +7,13 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
+    "build": "turbo run build && pnpm cargo:make",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "clean": "pnpx rimraf ./**/node_modules ./pnpm-lock.yaml ./**/.next ./**/.turbo"
+    "clean": "pnpx rimraf ./**/node_modules ./pnpm-lock.yaml ./**/.next ./**/.turbo",
+    "cargo:make": "cd server && cargo make v1",
+    "cargo:run": "cd server && cargo run"
   },
   "devDependencies": {
     "eslint-config-custom": "workspace:*",
