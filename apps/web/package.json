@@ -7,7 +7,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest --coverage",
-    "storybook": "storybook dev",
+    "storybook": "storybook dev -p 6060",
     "storybook:build": "storybook build -o .storybook-dist",
     "generate-component": "sh ./shared/generate-component.sh"
   },

@@ -1,7 +1,7 @@
 export interface ExampleSectionProps {
-  empty?: boolean;
+  default?: boolean;
 }
 
-export const ExampleSection = ({ empty: _empty }: ExampleSectionProps) => {
+export const ExampleSection = ({ default: _default }: ExampleSectionProps) => {
   return <div>ExampleSection!</div>;
 };

@@ -1,4 +1,4 @@
-import { withMockdate } from '@shared/storybook';
+import { withMockdate } from '../shared/storybook';
 
 export const decorators = [withMockdate];
 
