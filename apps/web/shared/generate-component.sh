@@ -3,46 +3,47 @@
 echo "Enter component type:"
 options=("Atoms" "Molecules" "Organisms")
 select componentType in "${options[@]}"; do
-    case $componentType in
-    "Atoms")
-        break
-        ;;
-    "Molecules")
-        break
-        ;;
-    "Organisms")
-        break
-        ;;
-    *)
-        echo >&2 "Invalid option"
-        ;;
-    esac
+  case $componentType in
+  "Atoms")
+    break
+    ;;
+  "Molecules")
+    break
+    ;;
+  "Organisms")
+    break
+    ;;
+  *)
+    echo >&2 "Invalid option"
+    ;;
+  esac
 done
 
 componentName=$1
 if [ -z "$componentName" ]; then
-    echo >&2 "Please specify a component name"
-    exit 1
+  echo >&2 "Please specify a component name"
+  exit 1
 fi
 
 # Check if component name is in PascalCase
 if [[ ! "$componentName" =~ ^[A-Z][a-zA-Z0-9]*$ ]]; then
-    echo >&2 "Component name must be in PascalCase"
-    exit 1
+  echo >&2 "Component name must be in PascalCase"
+  exit 1
 fi
 
-componentPath=$(pwd)/$componentName
+basePath=$(git rev-parse --show-toplevel)/apps/web/components/$componentType
+componentPath=$basePath/$componentName
 if [ -d "$componentPath" ]; then
-    echo >&2 "$componentPath already exists"
-    exit 1
+  echo >&2 "$componentPath already exists"
+  exit 1
 fi
 mkdir "$componentPath"
 
 componentTemplate="export interface ${componentName}Props {
-  empty?: boolean;
+  default?: boolean;
 }
 
-export const ${componentName} = ({ empty: _empty }: ${componentName}Props) => {
+export const ${componentName} = ({ default: _default }: ${componentName}Props) => {
   return <div>${componentName}!</div>;
 };"
 echo "$componentTemplate" >"$componentPath/${componentName}.tsx"
@@ -56,7 +57,7 @@ export default {
   component: ${componentName},
 } as Meta<typeof ${componentName}>;
 
-export const Story: StoryObj<${componentName}Props> = { args: { empty: true } };"
+export const Story: StoryObj<${componentName}Props> = { args: { default: true } };"
 echo "$storiesTemplate" >"$componentPath/${componentName}.stories.tsx"
 
 specTemplate="import { render, screen } from '@testing-library/react';
@@ -70,3 +71,10 @@ describe('${componentType}', () => {
   });
 });"
 echo "$specTemplate" >"$componentPath/${componentName}.spec.tsx"
+
+exportTemplate="export * from './${componentName}'"
+
+echo "$exportTemplate" >"$componentPath/index.ts"
+echo "$exportTemplate" >>${basePath}/index.ts
+
+echo "Successfully created ${componentType}/${componentName}"
