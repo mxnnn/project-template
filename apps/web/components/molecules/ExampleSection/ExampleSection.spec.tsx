@@ -5,6 +5,6 @@ import { ExampleSection } from './ExampleSection';
 describe('Molecules', () => {
   it('renders the ExampleSection', () => {
     render(<ExampleSection />);
-    expect(screen.getByText('Example Section!')).toBeInTheDocument();
+    expect(screen.getByText('ExampleSection!')).toBeInTheDocument();
   });
 });

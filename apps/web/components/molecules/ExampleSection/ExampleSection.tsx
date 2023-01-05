@@ -1,3 +1,7 @@
-export const ExampleSection = () => {
-  return <div>Example Section!</div>;
+export interface ExampleSectionProps {
+  empty?: boolean;
+}
+
+export const ExampleSection = ({ empty: _empty }: ExampleSectionProps) => {
+  return <div>ExampleSection!</div>;
 };

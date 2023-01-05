@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { ExampleSection } from './ExampleSection';
+import { ExampleSection, ExampleSectionProps } from './ExampleSection';
 
 export default {
   title: 'Molecules/ExampleSection',
   component: ExampleSection,
 } as Meta<typeof ExampleSection>;
 
-export const Story: StoryObj<typeof ExampleSection> = { args: { label: 'Label' } };
+export const Story: StoryObj<ExampleSectionProps> = { args: { empty: true } };
