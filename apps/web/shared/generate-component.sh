@@ -57,7 +57,7 @@ export default {
   component: ${componentName},
 } as Meta<typeof ${componentName}>;
 
-export const Story: StoryObj<${componentName}Props> = { args: { default: true } };"
+export const Default: StoryObj<${componentName}Props> = { args: { default: true } };"
 echo "$storiesTemplate" >"$componentPath/${componentName}.stories.tsx"
 
 specTemplate="import { render, screen } from '@testing-library/react';

@@ -7,4 +7,4 @@ export default {
   component: ExampleSection,
 } as Meta<typeof ExampleSection>;
 
-export const Story: StoryObj<ExampleSectionProps> = { args: { default: true } };
+export const Default: StoryObj<ExampleSectionProps> = { args: { default: true } };

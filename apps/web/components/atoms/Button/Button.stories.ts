@@ -7,4 +7,6 @@ export default {
   component: Button,
 } as Meta<typeof Button>;
 
-export const Story: StoryObj<ButtonProps> = { args: { default: true } };
+export const Default: StoryObj<ButtonProps> = {
+  args: { default: true },
+};

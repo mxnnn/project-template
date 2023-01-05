@@ -1,11 +1,11 @@
 import mockdate from 'mockdate';
 
-import { Story, StoryContext } from '@storybook/react';
+import { StoryContext, StoryFn } from '@storybook/react';
 
 /**
  * Storybook decorator to mock the system date.
  */
-export const withMockdate = (Story: Story, { parameters }: StoryContext) => {
+export const withMockdate = (Story: StoryFn, { parameters }: StoryContext) => {
   mockdate.reset();
 
   if (parameters.mockdate) {

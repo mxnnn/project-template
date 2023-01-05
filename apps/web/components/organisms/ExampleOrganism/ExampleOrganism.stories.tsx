@@ -7,4 +7,4 @@ export default {
   component: ExampleOrganism,
 } as Meta<typeof ExampleOrganism>;
 
-export const Story: StoryObj<ExampleOrganismProps> = { args: { default: true } };
+export const Default: StoryObj<ExampleOrganismProps> = { args: { default: true } };
