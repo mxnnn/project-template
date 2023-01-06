@@ -9,7 +9,7 @@
     "test": "jest --coverage",
     "storybook": "storybook dev -p 6060",
     "storybook:build": "storybook build -o .storybook-dist",
-    "generate-component": "sh ./shared/generate-component.sh"
+    "generate-component": "sh ./scripts/generate-component.sh"
   },
   "dependencies": {
     "next": "13.1.1",

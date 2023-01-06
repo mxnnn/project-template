@@ -16,6 +16,16 @@
   curl -fsSL https://get.pnpm.io/install.sh | sh -
   ```
 
+- If not installed, install [`Rust`](https://www.rust-lang.org/).
+
+  ```bash
+  brew install rust
+
+  # or ...
+
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  ```
+
 - Checkout this repository via `git` or the [Github CLI.](https://cli.github.com/).
 
   ```bash
