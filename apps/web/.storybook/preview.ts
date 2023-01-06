@@ -1,6 +1,23 @@
-import { withMockdate } from '../shared/storybook';
+import { withMockdate, withMuiTheme } from '../shared/storybook';
 
-export const decorators = [withMockdate];
+export const decorators = [withMockdate, withMuiTheme];
+
+export const globalTypes = {
+  theme: {
+    name: 'Theme',
+    title: 'Theme',
+    description: 'Theme for your components',
+    defaultValue: 'light',
+    toolbar: {
+      icon: 'paintbrush',
+      dynamicTitle: true,
+      items: [
+        { value: 'light', left: '☀️', title: 'Light mode' },
+        { value: 'dark', left: '🌙', title: 'Dark mode' },
+      ],
+    },
+  },
+};
 
 export default {
   actions: { argTypesRegex: '^on[A-Z].*' },

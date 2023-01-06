@@ -5,13 +5,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "next lint --no-cache",
     "test": "jest --coverage",
     "storybook": "storybook dev -p 6060",
     "storybook:build": "storybook build -o .storybook-dist",
-    "generate-component": "sh ./scripts/generate-component.sh"
+    "generate-component": "sh ./scripts/generate-component.sh",
+    "preinstall": "pnpx only-allow pnpm"
   },
   "dependencies": {
+    "@emotion/cache": "^11.10.5",
+    "@emotion/react": "^11.10.5",
+    "@emotion/server": "^11.10.0",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.3",
     "next": "13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",

@@ -1,3 +1,5 @@
+import type { StorybookConfig } from '@storybook/types';
+
 export default {
   stories: ['../**/*.stories.mdx', '../**/*.stories.@(js|jsx|ts|tsx)'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials', '@storybook/addon-interactions'],
@@ -11,4 +13,4 @@ export default {
   features: {
     babelModeV7: true,
   },
-};
+} as StorybookConfig;
