@@ -1,13 +1,15 @@
-import { createTheme } from '@mui/material';
+import { createTheme, ThemeOptions } from '@mui/material/styles';
+import { deepmerge } from '@mui/utils';
 
 import { BaseTheme } from './BaseTheme';
 
 /**
  * The dark theme.
  */
-export const DarkTheme = createTheme({
-  ...BaseTheme,
+const _DarkTheme: ThemeOptions = {
   palette: {
     mode: 'dark',
   },
-});
+};
+
+export const DarkTheme = createTheme(deepmerge(BaseTheme, _DarkTheme));

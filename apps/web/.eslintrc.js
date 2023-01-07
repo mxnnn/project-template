@@ -19,7 +19,7 @@ module.exports = {
           ['^react'],
           ['^next'],
           ['^@mui|@emotion'],
-          ['^@shared'],
+          ['^@common'],
           ['^@components'],
           ['reflect-metadata$'],
           ['^\\w'],

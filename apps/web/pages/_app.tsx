@@ -1,27 +1,63 @@
-import type { AppProps } from 'next/app';
+import App, { type AppContext, AppProps } from 'next/app';
+import Head from 'next/head';
 
-import createEmotionCache, { type EmotionCache } from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
+import { CssBaseline } from '@mui/material';
 
-import { EnvironmentProvider, getNextEnvironment } from '@shared/env';
+import { EnvironmentProvider, getNextEnvironment } from '@common/env';
+import { createEmotionCache } from '@common/mui';
+
+import { DefaultThemeType, getThemeType, ThemeProvider, ThemeType } from '@components/themes';
 
 /**
  * Client-side cache styles, shared for the whole session of the user in the browser.
  */
-const clientSideEmotionCache = createEmotionCache({ key: 'css', prepend: true });
+const clientSideEmotionCache = createEmotionCache();
 
 interface NextAppProps extends AppProps {
-  emotionCache?: EmotionCache;
+  renderedTheme: ThemeType;
+  emotionCache?: typeof clientSideEmotionCache;
 }
 
-export default function App({ Component, pageProps, emotionCache = clientSideEmotionCache }: NextAppProps) {
+export default function _App({
+  Component,
+  pageProps,
+  emotionCache = clientSideEmotionCache,
+  renderedTheme,
+}: NextAppProps) {
   const env = getNextEnvironment();
 
   return (
-    <EnvironmentProvider environment={env}>
-      <CacheProvider value={emotionCache}>
-        <Component {...pageProps} />
-      </CacheProvider>
-    </EnvironmentProvider>
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta name="theme-color-dark" content="#F3F6F9" media="(prefers-color-scheme: dark)" />
+        <meta name="theme-color-light" content="#F3F6F9" media="(prefers-color-scheme: light)" />
+
+        <title>Mina Governance</title>
+      </Head>
+
+      <EnvironmentProvider environment={env}>
+        <CacheProvider value={emotionCache}>
+          <ThemeProvider value={renderedTheme}>
+            <CssBaseline />
+            <Component {...pageProps} />
+          </ThemeProvider>
+        </CacheProvider>
+      </EnvironmentProvider>
+    </>
   );
 }
+
+_App.getInitialProps = async (_ctx: AppContext) => {
+  const appProps = await App.getInitialProps(_ctx);
+  const { ctx } = _ctx;
+
+  const cookie = ctx.req?.headers.cookie;
+
+  return {
+    ...appProps,
+    renderedTheme: getThemeType(cookie ? cookie : DefaultThemeType),
+  };
+};

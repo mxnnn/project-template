@@ -14,10 +14,10 @@ export const NODE_ENV = ['development', 'test', 'production'] as const;
 export type AppReleaseStage = typeof APP_RELEASE_STAGES[number];
 export type NodeEnv = typeof NODE_ENV[number];
 
-export type Environment = {
+export interface Environment {
   env: NodeEnv;
   RELEASE_STAGE: AppReleaseStage;
-};
+}
 
 /**
  * Environment variables available to the Next.js app.

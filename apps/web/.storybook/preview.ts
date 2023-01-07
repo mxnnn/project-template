@@ -1,4 +1,4 @@
-import { withMockdate, withMuiTheme } from '../shared/storybook';
+import { withMockdate, withMuiTheme } from '../common/storybook';
 
 export const decorators = [withMockdate, withMuiTheme];
 

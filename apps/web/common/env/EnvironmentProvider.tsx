@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { createContext, FC } from 'react';
 
-import { Environment } from '@shared/env';
+import { Environment } from '@common/env';
 
 import { getNextEnvironment } from './env';
 
