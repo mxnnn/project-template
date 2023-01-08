@@ -14,9 +14,10 @@ const _: Config = {
   collectCoverage: true,
   collectCoverageFrom: [
     '<rootDir>/**/*.{ts,tsx}',
-    '!<rootDir>/**/app/**',
+    '!<rootDir>/**/middleware.ts',
     '!<rootDir>/**/index.ts',
-    '!<rootDir>/**/storybook/**',
+    '!<rootDir>/**/{storybook,.storybook}/**',
+    '!<rootDir>/components/{themes,provider}/**',
     '!<rootDir>/**/jest.*.{js,ts}',
     '!<rootDir>/**/*.{generated,stories,d}.{ts,tsx}',
   ],

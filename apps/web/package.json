@@ -2,15 +2,16 @@
   "name": "mina-governance-web",
   "version": "1.0.0",
   "scripts": {
+    "build": "pnpm lint && next build",
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "generate-component": "sh ./scripts/generate-component.sh",
+    "lint:fix": "next lint --no-cache --fix",
     "lint": "next lint --no-cache",
+    "preinstall": "pnpx only-allow pnpm",
     "test": "jest --coverage",
     "storybook": "storybook dev -p 6060",
     "storybook:build": "storybook build -o .storybook-dist",
-    "generate-component": "sh ./scripts/generate-component.sh",
-    "preinstall": "pnpx only-allow pnpm"
+    "start": "next start"
   },
   "dependencies": {
     "@emotion/cache": "^11.10.5",
