@@ -7,7 +7,7 @@ export const EnvironmentContext = createContext<Environment>(getNextEnvironment(
 
 export interface EnvironmentProviderProps {
   environment: Environment;
-  children: JSX.Element;
+  children: React.ReactNode | React.ReactNode[];
 }
 
 /**
