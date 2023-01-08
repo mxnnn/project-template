@@ -1,6 +1,6 @@
 import { Theme } from '@emotion/react';
 
-import { DarkTheme, DefaultTheme, DefaultThemeType, LightTheme, ThemeType } from '@components/themes';
+import { DarkTheme, DefaultTheme, DefaultThemeType, LightTheme, ThemeType } from 'components/themes';
 
 export interface ThemeValue {
   key: ThemeType;

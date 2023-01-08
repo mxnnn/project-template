@@ -1,6 +1,9 @@
 import nextJest from 'next/jest';
 
 import type { Config } from 'jest';
+import { pathsToModuleNameMapper } from 'ts-jest';
+
+import { compilerOptions } from './tsconfig.json';
 
 const createJestConfig = nextJest({
   dir: './',
@@ -20,6 +23,9 @@ const _: Config = {
   coverageDirectory: 'coverage',
   coverageProvider: 'v8',
   moduleDirectories: ['node_modules', 'shared'],
+  modulePaths: [compilerOptions.baseUrl],
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
+  resolver: '',
   preset: 'ts-jest',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   testEnvironment: 'jsdom',

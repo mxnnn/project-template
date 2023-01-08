@@ -18,9 +18,9 @@ module.exports = {
         groups: [
           ['^react'],
           ['^next'],
-          ['^@mui|@emotion'],
-          ['^@common'],
-          ['^@components'],
+          ['^@mui|@emotion|@storybook'],
+          ['^common'],
+          ['^components'],
           ['reflect-metadata$'],
           ['^\\w'],
           ['^@\\w'],

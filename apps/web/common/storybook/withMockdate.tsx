@@ -1,6 +1,6 @@
-import mockdate from 'mockdate';
-
 import { StoryContext, StoryFn } from '@storybook/react';
+
+import mockdate from 'mockdate';
 
 /**
  * Storybook decorator to mock the system date.

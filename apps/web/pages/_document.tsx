@@ -3,9 +3,9 @@ import Document, { Head, Html, Main, NextScript } from 'next/document';
 
 import createEmotionServer from '@emotion/server/create-instance';
 
-import { createEmotionCache } from '@common/mui';
+import { createEmotionCache } from 'common/mui';
 
-import { Font } from '@components/themes/BaseTheme';
+import { Font } from 'components/themes/BaseTheme';
 
 export default class _Document extends Document {
   render() {

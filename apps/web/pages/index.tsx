@@ -1,6 +1,6 @@
 import { Button, Stack, Typography } from '@mui/material';
 
-import { useEnvironment, useTheme } from '@components/provider';
+import { useEnvironment, useTheme } from 'components/provider';
 
 export default function Home() {
   const { RELEASE_STAGE } = useEnvironment();

@@ -2,10 +2,10 @@ import { createContext, FC, useContext, useState } from 'react';
 
 import { ThemeProvider as MUIThemeProvider } from '@mui/material/styles';
 
-import { escapeHTML } from '@common/helpers';
-import { getDefaultTheme, getThemeValue, ThemeValue } from '@common/theme';
+import { escapeHTML } from 'common/helpers';
+import { getDefaultTheme, getThemeValue, ThemeValue } from 'common/theme';
 
-import { DarkTheme, LightTheme, ThemeType } from '@components/themes';
+import { DarkTheme, LightTheme, ThemeType } from 'components/themes';
 
 interface ThemeContextValue {
   theme: ThemeValue;

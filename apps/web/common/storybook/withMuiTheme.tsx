@@ -1,8 +1,7 @@
 import { CssBaseline, StyledEngineProvider, ThemeProvider } from '@mui/material';
-
 import { Decorator, StoryContext, StoryFn } from '@storybook/react';
 
-import { DarkTheme, LightTheme } from '../../components/themes';
+import { DarkTheme, LightTheme } from 'components/themes';
 
 /**
  * Storybook decorator that adds the Material UI theme provider to the story
