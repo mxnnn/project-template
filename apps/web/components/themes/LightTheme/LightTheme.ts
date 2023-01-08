@@ -1,7 +1,7 @@
 import { createTheme, ThemeOptions } from '@mui/material/styles';
 import { deepmerge } from '@mui/utils';
 
-import { BaseTheme } from './BaseTheme';
+import { BaseTheme } from '../BaseTheme';
 
 /**
  * The light theme.

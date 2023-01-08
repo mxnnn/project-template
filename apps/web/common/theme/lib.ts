@@ -1,13 +1,18 @@
 import { Theme } from '@emotion/react';
 
-import { DarkTheme } from './DarkTheme';
-import { DefaultThemeType, getDefaultTheme, ThemeType } from './DefaultTheme';
-import { LightTheme } from './LightTheme';
+import { DarkTheme, DefaultTheme, DefaultThemeType, LightTheme, ThemeType } from '@components/themes';
 
 export interface ThemeValue {
   key: ThemeType;
   value: Theme;
 }
+
+export const getDefaultTheme = (): ThemeValue => {
+  return {
+    key: DefaultThemeType,
+    value: DefaultTheme,
+  };
+};
 
 export const getThemeType = (input: string): ThemeType => {
   const match = input.match(/theme=(dark|light)/);

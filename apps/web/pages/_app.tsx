@@ -4,10 +4,12 @@ import Head from 'next/head';
 import { CacheProvider } from '@emotion/react';
 import { CssBaseline } from '@mui/material';
 
-import { EnvironmentProvider, getNextEnvironment } from '@common/env';
+import { getNextEnvironment } from '@common/env';
 import { createEmotionCache } from '@common/mui';
+import { getThemeType } from '@common/theme';
 
-import { DefaultThemeType, getThemeType, ThemeProvider, ThemeType } from '@components/themes';
+import { EnvironmentProvider, ThemeProvider } from '@components/provider';
+import { DefaultThemeType, ThemeType } from '@components/themes';
 
 /**
  * Client-side cache styles, shared for the whole session of the user in the browser.
