@@ -1,5 +1,5 @@
 {
-  "name": "mina-governance",
+  "name": "example-project",
   "version": "0.0.0",
   "private": true,
   "workspaces": [
@@ -8,14 +8,14 @@
   ],
   "scripts": {
     "build": "turbo run build && pnpm cargo:make",
-    "build:web": "turbo run build --filter=mina-governance-web",
-    "build:docs": "turbo run build --filter=mina-governance-docs",
-    "clean": "pnpx rimraf ./**/node_modules ./pnpm-lock.yaml ./**/.next ./**/.turbo",
+    "build:web": "turbo run build --filter=example-project-web",
+    "build:docs": "turbo run build --filter=example-project-docs",
+    "clean": "pnpx rimraf ./**/node_modules ./pnpm-lock.yaml ./**/.next ./**/.turbo ./**/target",
     "cargo:make": "cd server && cargo make v1",
     "cargo:run": "cd server && cargo run",
     "dev": "turbo run dev --parallel",
-    "dev:web": "turbo run dev --filter=mina-governance-web",
-    "dev:docs": "turbo run dev --filter=mina-governance-docs",
+    "dev:web": "turbo run dev --filter=example-project-web",
+    "dev:docs": "turbo run dev --filter=example-project-docs",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },

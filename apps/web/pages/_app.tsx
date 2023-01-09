@@ -37,7 +37,7 @@ export default function _App({
         <meta name="theme-color-dark" content="#F3F6F9" media="(prefers-color-scheme: dark)" />
         <meta name="theme-color-light" content="#F3F6F9" media="(prefers-color-scheme: light)" />
 
-        <title>Mina Governance</title>
+        <title>Example Project</title>
       </Head>
 
       <EnvironmentProvider environment={env}>

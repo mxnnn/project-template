@@ -1,5 +1,5 @@
 {
-  "name": "mina-governance-web",
+  "name": "example-project-web",
   "version": "1.0.0",
   "scripts": {
     "build": "pnpm lint && next build",

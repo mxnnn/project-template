@@ -2,7 +2,8 @@ import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
 /**
- * Middleware that runs on every request. Sets preferred theme cookie.
+ * Middleware that runs on every request.
+ * Sets default theme cookie.
  */
 export function middleware(req: NextRequest) {
   const res = NextResponse.next();

@@ -18,7 +18,7 @@ args = ["clippy", "--", "-D", "warnings", "-D", "clippy::pedantic", "-D", "clipp
 
 [tasks.v1]
 run_task = [
-    { name = ["format", "clippy", "build", "test"], condition = { files_modified = { input = ["./Cargo.toml", "./src/**/*.rs"], output = ["./target/**/mina-governance-server"] } } },
+    { name = ["format", "clippy", "build", "test"], condition = { files_modified = { input = ["./Cargo.toml", "./src/**/*.rs"], output = ["./target/**/example-project-server"] } } },
 ]
 
 

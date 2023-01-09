@@ -1,7 +1,7 @@
-<h1 align="center">Mina Governance Web</h1>
+<h1 align="center">Example Project Web</h1>
 
 <p align="center">
-  <b>A NextJS based frontend for the Mina Governance Dashboard.</b>
+  <b>A NextJS based frontend for the Example Project Dashboard.</b>
 </p>
 
 ### Prerequisites

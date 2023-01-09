@@ -1,7 +1,7 @@
-<h1 align="center">Mina Governance</h1>
+<h1 align="center">Example Project</h1>
 
 <p align="center">
-  <b>Mina Governance provides users a web outlet to govern the Mina Blockchain.</b>
+  <b>Example Project Description</b>
 </p>
 
 ## Getting started
@@ -29,11 +29,11 @@
 - Checkout this repository via `git` or the [Github CLI.](https://cli.github.com/).
 
   ```bash
-  git clone git@github.com:Granola-Team/mina-governance.git
+  git clone git@github.com:Example-Team/example-project.git
 
   # or ...
 
-  gh repo clone Granola-Team/mina-governance
+  gh repo clone Example-Team/example-project
   ```
 
 - In the new directory, install dependencies.
@@ -57,5 +57,4 @@
 - [Next.js Documentation](https://nextjs.org/docs/getting-started)
 - [Rust Programming Language](https://doc.rust-lang.org/book/)
 - [Typescript](https://www.typescriptlang.org/docs/)
-- [Mina Protocol](https://docs.minaprotocol.com/)
 - [Turborepo](https://turbo.build/)
