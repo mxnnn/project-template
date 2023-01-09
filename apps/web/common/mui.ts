@@ -10,5 +10,5 @@ export const createEmotionCache = (): EmotionCache => {
     insertionPoint = emotionInsertionPoint ?? undefined;
   }
 
-  return createCache({ key: 'css', insertionPoint, prepend: true });
+  return createCache({ key: 'mui', insertionPoint });
 };

@@ -1,4 +1,4 @@
-import { StoryContext, StoryFn } from '@storybook/react';
+import type { StoryContext, StoryFn } from '@storybook/react';
 
 import mockdate from 'mockdate';
 

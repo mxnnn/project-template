@@ -1,5 +1,5 @@
 import { CssBaseline, StyledEngineProvider, ThemeProvider } from '@mui/material';
-import { Decorator, StoryContext, StoryFn } from '@storybook/react';
+import type { Decorator, StoryContext, StoryFn } from '@storybook/react';
 
 import { DarkTheme, LightTheme } from 'components/themes';
 

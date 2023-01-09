@@ -1,4 +1,4 @@
-import App, { type AppContext, AppProps } from 'next/app';
+import App, { type AppContext, type AppProps } from 'next/app';
 import Head from 'next/head';
 
 import { CacheProvider } from '@emotion/react';
@@ -9,7 +9,7 @@ import { createEmotionCache } from 'common/mui';
 import { getThemeType } from 'common/theme';
 
 import { EnvironmentProvider, ThemeProvider } from 'components/provider';
-import { DefaultThemeType, ThemeType } from 'components/themes';
+import { type ThemeType, DefaultThemeType } from 'components/themes';
 
 /**
  * Client-side cache styles, shared for the whole session of the user in the browser.
