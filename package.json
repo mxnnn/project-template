@@ -10,7 +10,7 @@
     "build": "turbo run build && pnpm cargo:make",
     "build:web": "turbo run build --filter=example-project-web",
     "build:docs": "turbo run build --filter=example-project-docs",
-    "clean": "pnpx rimraf ./**/node_modules ./pnpm-lock.yaml ./**/.next ./**/.turbo ./**/target",
+    "clean": "pnpx rimraf ./**/node_modules ./**/.next ./**/.turbo ./**/target ./**/.swc",
     "cargo:make": "cd server && cargo make v1",
     "cargo:run": "cd server && cargo run",
     "dev": "turbo run dev --parallel",
