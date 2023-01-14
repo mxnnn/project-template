@@ -1,4 +1,4 @@
-<h1 align="center">Example Project</h1>
+<h1 align="center">Example Project v1</h1>
 
 <p align="center">
   <b>Example Project Description</b>
