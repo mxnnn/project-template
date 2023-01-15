@@ -34,6 +34,9 @@ yarn-error.log*
 
 # rust
 target
+debug
+release
+.rustc_info.json
 
 # package manager
 yarn.lock

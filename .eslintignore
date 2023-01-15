@@ -1,5 +1,7 @@
 .swc/
 .next/
+.github/
+.vscode/
 node_modules/
 
 .eslintrc.js

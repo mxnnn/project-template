@@ -16,6 +16,7 @@ module.exports = {
   plugins: ['@typescript-eslint', '@next/eslint-plugin-next', 'simple-import-sort', 'unused-imports'],
   extends: [
     'next',
+    'turbo',
     'prettier',
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
@@ -24,5 +25,9 @@ module.exports = {
   rules: {
     '@typescript-eslint/no-unused-vars': 'off',
     'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-vars': [
+      'error',
+      { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' },
+    ],
   },
 };
