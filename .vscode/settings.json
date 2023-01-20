@@ -6,5 +6,6 @@
   "eslint.packageManager": "pnpm",
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.importModuleSpecifier": "shortest",
-  "typescript.preferences.quoteStyle": "single"
+  "typescript.preferences.quoteStyle": "single",
+  "jest.rootPath": "apps/web"
 }
