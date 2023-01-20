@@ -4,11 +4,10 @@ import Head from 'next/head';
 import { CacheProvider } from '@emotion/react';
 import { CssBaseline } from '@mui/material';
 
-import { getNextEnvironment } from 'common/env';
 import { createEmotionCache } from 'common/mui';
 import { getThemeType } from 'common/theme';
 
-import { EnvironmentProvider, ThemeProvider } from 'components/provider';
+import { ThemeProvider } from 'components/provider';
 import { type ThemeType, DefaultThemeType } from 'components/themes';
 
 /**
@@ -27,8 +26,6 @@ export default function _App({
   emotionCache = clientSideEmotionCache,
   renderedTheme,
 }: NextAppProps) {
-  const env = getNextEnvironment();
-
   return (
     <>
       <Head>
@@ -40,14 +37,12 @@ export default function _App({
         <title>Example Project</title>
       </Head>
 
-      <EnvironmentProvider environment={env}>
-        <CacheProvider value={emotionCache}>
-          <ThemeProvider value={renderedTheme}>
-            <CssBaseline />
-            <Component {...pageProps} />
-          </ThemeProvider>
-        </CacheProvider>
-      </EnvironmentProvider>
+      <CacheProvider value={emotionCache}>
+        <ThemeProvider value={renderedTheme}>
+          <CssBaseline />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </CacheProvider>
     </>
   );
 }

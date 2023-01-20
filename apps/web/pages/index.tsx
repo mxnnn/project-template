@@ -1,20 +1,20 @@
 import { Button, Stack, Typography } from '@mui/material';
 
-import { useEnvironment, useTheme } from 'components/provider';
+import { useTheme } from 'components/provider';
 
 export default function Home() {
-  const { RELEASE_STAGE } = useEnvironment();
   const { theme, setTheme } = useTheme();
 
   return (
-    <Stack height="100vh" width="100%" display="flex" justifyContent="center" alignItems="center">
-      <Typography variant="h2">{RELEASE_STAGE}</Typography>
+    <Stack spacing={3} height="100vh" width="100%" display="flex" justifyContent="center" alignItems="center">
+      <Typography variant="h2">Hello from {process.env.NEXT_PUBLIC_RELEASE_STAGE}!</Typography>
       <Button
+        variant="contained"
         onClick={() => {
           setTheme(theme.key === 'dark' ? 'light' : 'dark');
         }}
       >
-        Click!
+        Toggle Theme
       </Button>
     </Stack>
   );
