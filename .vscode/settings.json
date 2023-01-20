@@ -4,6 +4,10 @@
     "source.fixAll.eslint": true
   },
   "eslint.packageManager": "pnpm",
+  "eslint.options": {
+    "extensions": [".js", ".jsx", ".mdx", ".ts", ".tsx"]
+  },
+  "eslint.validate": ["mdx", "javascript", "javascriptreact", "typescript", "typescriptreact"],
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.importModuleSpecifier": "shortest",
   "typescript.preferences.quoteStyle": "single",

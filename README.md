@@ -42,16 +42,6 @@
   pnpm clean && pnpm install
   ```
 
-## Directory layout
-
-    .
-    ├── apps                     # NextJS applications (Web & Docs)
-    ├── server                   # Rust API/Backend
-    ├── packages                 # Shared packages
-    ├── scripts                  # Scripts
-    ├── LICENSE
-    └── README.md
-
 ## Resources
 
 - [Next.js Documentation](https://nextjs.org/docs/getting-started)
