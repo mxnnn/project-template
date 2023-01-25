@@ -18,6 +18,6 @@
       "persistent": true
     }
   },
-  "globalDependencies": [".env"],
-  "globalEnv": ["NODE_ENV", "NEXT_PUBLIC_RELEASE_STAGE"]
+  "globalDependencies": ["**/.env"],
+  "globalEnv": ["NODE_ENV", "NEXT_PUBLIC_RELEASE_STAGE", "SKIP_ENV_VALIDATION"]
 }

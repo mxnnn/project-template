@@ -3,8 +3,8 @@ import { z } from 'zod';
 
 /**
  * Main environment variable schema.
- * By default, environment variables are only available in the Node.js environment.
- * In order to additionally expose a variable to the browser, prefix the variable with NEXT_PUBLIC.
+ * By default, environment variables are only available in the Node environment.
+ * In order to expose a variable to the browser - prefix the variable with NEXT_PUBLIC.
  */
 export const schema = z.object({
   NODE_ENV: z.enum(['development', 'test', 'production']),
@@ -12,7 +12,7 @@ export const schema = z.object({
 });
 
 /**
- * Environment variable declarations based on the schema help structure your environment variables programmatically.
+ * Environment variable declarations based on the schema.
  * @type {{ [k in keyof z.infer<typeof schema>]: z.infer<typeof schema>[k] | undefined }}
  */
 export const env = {
@@ -29,9 +29,9 @@ export const formatZodError = (/** @type z.ZodFormattedError<Map<string, string>
     })
     .filter(Boolean);
 
-const safeParsedEnv = schema.safeParse(env);
+const result = schema.safeParse(env);
 
-if (!safeParsedEnv.success) {
-  console.error('❌ Invalid environment variables:\n', ...formatZodError(safeParsedEnv.error.format()));
-  throw new Error('Invalid environment variables');
+if (!result.success) {
+  console.error('Error: Required environment variable not found:\n', ...formatZodError(result.error.format()));
+  throw new Error('Error: Required environment variable not found');
 }
