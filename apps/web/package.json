@@ -7,7 +7,6 @@
     "generate-component": "sh ./scripts/generate-component.sh",
     "lint:fix": "next lint --no-cache --fix",
     "lint": "next lint --no-cache",
-    "preinstall": "pnpx only-allow pnpm",
     "test": "jest --coverage",
     "storybook": "storybook dev -p 6060",
     "storybook:build": "storybook build -o .storybook-dist",
