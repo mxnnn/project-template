@@ -7,9 +7,13 @@
   "eslint.options": {
     "extensions": [".js", ".jsx", ".mdx", ".ts", ".tsx"]
   },
-  "eslint.validate": ["mdx", "javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.importModuleSpecifier": "shortest",
   "typescript.preferences.quoteStyle": "single",
+  "jest.autoRevealOutput": "off",
+  "jest.nodeEnv": {
+    "SKIP_ENV_VALIDATION": 1
+  },
   "jest.rootPath": "apps/web"
 }

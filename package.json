@@ -23,9 +23,7 @@
     "dev:docs": "turbo run dev --filter=example-project-docs",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "dotenv -- turbo run lint",
-    "test": "dotenv -- turbo run test --parallel",
-    "test:web": "dotenv -- turbo run test --filter=example-project-web",
-    "test:docs": "turbo run test --filter=example-project-docs"
+    "test:web": "SKIP_ENV_VALIDATION=1 turbo run test --filter=example-project-web"
   },
   "devDependencies": {
     "dotenv-cli": "^6.0.0",
