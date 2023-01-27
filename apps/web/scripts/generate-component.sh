@@ -72,7 +72,7 @@ describe('${componentType}', () => {
 });"
 echo "$specTemplate" >"$componentPath/${componentName}.spec.tsx"
 
-exportTemplate="export * from './${componentName}'"
+exportTemplate="export * from './${componentName}';"
 
 echo "$exportTemplate" >"$componentPath/index.ts"
 echo "$exportTemplate" >>${basePath}/index.ts
