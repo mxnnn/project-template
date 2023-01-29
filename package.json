@@ -14,7 +14,7 @@
     "build": "dotenv -- turbo run build --parallel",
     "build:web": "dotenv -- turbo run build --filter=example-project-web",
     "build:docs": "turbo run build --filter=example-project-docs",
-    "clean": "pnpx rimraf ./**/node_modules ./**/.next ./**/.turbo ./**/target ./**/.swc",
+    "clean": "find . -type d \\( -name node_modules -o -name .next -o -name .swc -o -name .turbo -o -name target \\) -exec rm -rf {} +",
     "cargo:make": "cargo make --cwd ./server v1",
     "cargo:run": "cargo run --bin example-project-server",
     "cargo:test": "cargo test --bin example-project-server",

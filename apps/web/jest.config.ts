@@ -9,17 +9,16 @@ const createJestConfig = nextJest({
   dir: './',
 });
 
-const _: Config = {
+export default createJestConfig({
   clearMocks: true,
   collectCoverage: true,
   collectCoverageFrom: [
     '<rootDir>/**/*.{ts,tsx}',
-    '!<rootDir>/**/middleware.ts',
-    '!<rootDir>/**/index.ts',
+    '!<rootDir>/**/common/**',
     '!<rootDir>/**/{storybook,.storybook}/**',
     '!<rootDir>/components/{themes,provider}/**',
-    '!<rootDir>/**/jest.*.{js,ts}',
     '!<rootDir>/**/*.{generated,stories,d}.{ts,tsx}',
+    '!<rootDir>/**/{index.ts,middleware.ts,jest.*.{js,ts}}',
   ],
   coverageDirectory: 'coverage',
   coverageProvider: 'v8',
@@ -37,5 +36,4 @@ const _: Config = {
       isolatedModules: true,
     },
   },
-};
-export default createJestConfig(_);
+} satisfies Config);

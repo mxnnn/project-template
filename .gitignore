@@ -33,7 +33,7 @@ yarn-error.log*
 .turbo
 
 # rust
-target
+target/
 debug
 release
 .rustc_info.json
